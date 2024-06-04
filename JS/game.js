@@ -218,7 +218,7 @@ function endGame() {
     }else if (score >= 5 && score <= 7 || score >= 16 && score <= 18 ) {
         questionElement.textContent = `New Code = BACKGROUND 2`;
     } else if (score >= 8 && score <= 10 || score >= 19 && score <= 21 ) {
-        questionElement.textContent = `New Code = OPEN MUSIK 1`;
+        questionElement.textContent = `New Code = BACKGROUND 2`;
     } else if (score >= 11 && score <= 13 || score >= 22 && score <= 24 ) {
         questionElement.textContent = `New Code = BACKGROUND 3`;
     } else if (score >= 14 && score <= 15 || score >= 25 && score <= 30 ) {

@@ -411,6 +411,27 @@ document.querySelector('.back-materi-bab6').addEventListener('click', () => {
 })
 
 
+document.querySelector('.back-materi-bab7').addEventListener('click', () => {
+    const button2 = document.querySelectorAll('.materi')
+    const button1 = document.querySelectorAll('.materi-bab7')
+
+    button1.forEach(element => {
+        element.style.display = 'none'
+        setTimeout(() => {
+            element.style.opacity = '0'
+        },1)
+    })
+
+    button2.forEach(element => {
+        element.style.display = 'block'
+        setTimeout(() => {
+            element.style.opacity = '1'
+        },1)
+    })
+
+})
+
+
 // =========================== js Materi Mobile
 document.querySelector('.button-materi-bab1').addEventListener('click', () => {
     const button1 = document.querySelectorAll('.materi')
@@ -718,6 +739,61 @@ document.querySelector('.button-materi-bab6').addEventListener('click', () => {
 document.querySelector('.back-materi-bab6-mobile').addEventListener('click', () => {
     const button2 = document.querySelectorAll('.materi')
     const button1 = document.querySelectorAll('.materi-bab6')
+    const button3 = document.querySelectorAll('.navigation')
+
+    button1.forEach(element => {
+        element.style.display = 'none'
+        setTimeout(() => {
+            element.style.opacity = '0'
+        },1)
+    })
+
+    button2.forEach(element => {
+        element.style.display = 'block'
+        setTimeout(() => {
+            element.style.opacity = '1'
+        },1)
+    })
+
+    button3.forEach(element => {
+        element.style.display = 'flex'
+        setTimeout(() => {
+            element.style.opacity = '1'
+        },1)
+    })
+})
+
+
+
+
+document.querySelector('.button-materi-bab7').addEventListener('click', () => {
+    const shit = document.querySelectorAll('.materi-bab7');
+    const shot = document.querySelectorAll('.materi')
+    const button3 = document.querySelectorAll('.navigation')
+
+    shit.forEach(element => {
+        element.style.display = 'block'
+        setTimeout(() => {
+            element.style.opacity = '1'
+        }, 40)
+    })
+
+    shot.forEach(element => {
+        element.style.display = 'none'
+        setTimeout(() => {
+            element.style.opacity = '0'
+        }, 40)
+    })
+
+    button3.forEach(element => {
+        element.style.display = 'none'
+    })
+})
+
+
+document.querySelector('.back-materi-bab7-mobile').addEventListener('click', () => {
+    const button2 = document.querySelectorAll('.materi')
+    const button1 = document.querySelectorAll('.materi-bab7')
     const button3 = document.querySelectorAll('.navigation')
 
     button1.forEach(element => {

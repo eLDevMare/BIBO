@@ -41,7 +41,8 @@
 .materi-bab3,
 .materi-bab4,
 .materi-bab5,
-.materi-bab6{
+.materi-bab6,
+.materi-bab7{
     display: none;
     transition: opacity 0.5s ease-in-out;
     opacity: 0;
