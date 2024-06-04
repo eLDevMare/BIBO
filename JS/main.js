@@ -163,7 +163,7 @@ document.querySelector('.home-game').addEventListener('click', function() {
     sound_pencet.play();
 
     const game1 = document.querySelectorAll('.game-section-1');
-    const game2 = document.querySelectorAll('.home, .team-group-ico, .key-iconn');
+    const game2 = document.querySelectorAll('.home, .team-group-icon, .key-icon');
 
     game1.forEach(element => {
         element.style.display = 'block';

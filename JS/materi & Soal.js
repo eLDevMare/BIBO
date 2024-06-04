@@ -303,6 +303,7 @@ document.querySelector('.back-materi-bab1').addEventListener('click', () => {
     })
 
     console.log("hai")
+
 })
 
 
@@ -858,17 +859,13 @@ document.querySelector('.materi-bab-1-a-select').addEventListener('click', () =>
             element.style.opacity = '1';
         }, 40)
     })
+
 })
 
 
 document.querySelector('.back-materi-bab1-isi-a').addEventListener('click', () => {
     const button2 = document.querySelectorAll('.materi-bab1')
     const button1 = document.querySelectorAll('.materi-bab1-isi-a')
-    const videos = document.querySelector("iframe")
-    Array.prototype.forEach.call(videos, iframe => { 
-        iframe.contentWindow.postMessage(JSON.stringify({ event: 'command', 
-      func: 'stopVideo' }), '*');
-     });
 
     button1.forEach(element => {
         element.style.display = 'none'
@@ -883,8 +880,6 @@ document.querySelector('.back-materi-bab1-isi-a').addEventListener('click', () =
             element.style.opacity = '1'
         },1)
     })
-
-
 })
 
 document.querySelector('.back-materi-bab1-isi-a-mobile').addEventListener('click', () => {
@@ -1406,9 +1401,143 @@ document.querySelector('.back-materi-bab6-isi-a-mobile').addEventListener('click
 
 
 // ============================================
+let playerbab1a;
+let playerbab1b;
+let playerbab2a;
+let playerbab2b;
+let playerbab3a;
+let playerbab4a;
+let playerbab5a;
+let playerbab6a;
 
-// document.querySelector('#back-materi').addEventListener('click', () => {
-//     const video = document.querySelector(".materi-bab1-isi-a-video")
+// Fungsi yang dipanggil ketika API YouTube siap
+function onYouTubeIframeAPIReady() {
+    playerbab1a = new YT.Player('bab-1-a-pause', {
+        events: {
+            'onReady': onPlayerReady
+        }
+    });
 
-//     console.info(video)
-// })
+    playerbab1b = new YT.Player('bab-1-b-pause', {
+        events: {
+            'onReady': onPlayerReady
+        }
+    });
+
+    playerbab2a = new YT.Player('bab-2-a-pause', {
+        events: {
+            'onReady': onPlayerReady
+        }
+    });
+
+    playerbab2b = new YT.Player('bab-2-b-pause', {
+        events: {
+            'onReady': onPlayerReady
+        }
+    });
+
+    playerbab3a = new YT.Player('bab-3-a-pause', {
+        events: {
+            'onReady': onPlayerReady
+        }
+    });
+
+    playerbab4a = new YT.Player('bab-4-a-pause', {
+        events: {
+            'onReady': onPlayerReady
+        }
+    });
+
+    playerbab5a = new YT.Player('bab-5-a-pause', {
+        events: {
+            'onReady': onPlayerReady
+        }
+    });
+
+    playerbab6a = new YT.Player('bab-6-a-pause', {
+        events: {
+            'onReady': onPlayerReady
+        }
+    });
+}
+
+// Fungsi yang dipanggil saat pemutar video siap
+function onPlayerReady(event) {
+    // Event listener untuk tombol back untuk masing-masing pemutar
+    document.querySelector('.back-materi-bab1-isi-a').addEventListener('click', () => {
+        playerbab1a.pauseVideo();
+    });
+
+    document.querySelector('.back-materi-bab1-isi-b').addEventListener('click', () => {
+        playerbab1b.pauseVideo();
+    });
+
+    document.querySelector('.back-materi-bab2-isi-a').addEventListener('click', () => {
+        playerbab2a.pauseVideo();
+    });
+
+    document.querySelector('.back-materi-bab2-isi-b').addEventListener('click', () => {
+        playerbab2b.pauseVideo();
+    });
+
+    document.querySelector('.back-materi-bab3-isi-a').addEventListener('click', () => {
+        playerbab3a.pauseVideo();
+    });
+
+    document.querySelector('.back-materi-bab4-isi-a').addEventListener('click', () => {
+        playerbab4a.pauseVideo();
+    });
+
+    document.querySelector('.back-materi-bab5-isi-a').addEventListener('click', () => {
+        playerbab5a.pauseVideo();
+    });
+
+    document.querySelector('.back-materi-bab6-isi-a').addEventListener('click', () => {
+        playerbab6a.pauseVideo();
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    document.querySelector('.back-materi-bab1-isi-a-mobile').addEventListener('click', () => {
+        playerbab1a.pauseVideo();
+    });
+
+    document.querySelector('.back-materi-bab1-isi-b-mobile').addEventListener('click', () => {
+        playerbab1b.pauseVideo();
+    });
+
+    document.querySelector('.back-materi-bab2-isi-a-mobile').addEventListener('click', () => {
+        playerbab2a.pauseVideo();
+    });
+
+    document.querySelector('.back-materi-bab2-isi-b-mobile').addEventListener('click', () => {
+        playerbab2b.pauseVideo();
+    });
+
+    document.querySelector('.back-materi-bab3-isi-a-mobile').addEventListener('click', () => {
+        playerbab3a.pauseVideo();
+    });
+
+    document.querySelector('.back-materi-bab4-isi-a-mobile').addEventListener('click', () => {
+        playerbab4a.pauseVideo();
+    });
+
+    document.querySelector('.back-materi-bab5-isi-a-mobile').addEventListener('click', () => {
+        playerbab5a.pauseVideo();
+    });
+
+    document.querySelector('.back-materi-bab6-isi-a-mobile').addEventListener('click', () => {
+        playerbab6a.pauseVideo();
+    });
+}
